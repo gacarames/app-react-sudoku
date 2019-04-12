@@ -1,0 +1,57 @@
+/********** vars **********/
+/* colors */
+/* brack-points */
+/* mixin */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 42px;
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.12);
+  z-index: 99; }
+  .nav-bar .btn-toggle-menu {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin-left: 12px;
+    background-image: url(../img/icons/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    .nav-bar .btn-toggle-menu:active {
+      background-color: fuchsia; }
+    .nav-bar .btn-toggle-menu:focus, .nav-bar .btn-toggle-menu:hover {
+      outline: none; }
+    .nav-bar .btn-toggle-menu.close {
+      background-image: url(../img/icons/icon-close.svg); }
+  .nav-bar .img-logo {
+    width: 100%;
+    height: auto;
+    max-height: 24px; }
+  .nav-bar .sidenav {
+    /* display: none; */
+    left: -300px;
+    height: 100%;
+    width: 80%;
+    max-width: 300px;
+    position: fixed;
+    z-index: 9;
+    top: 52px;
+    /* left: 0; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 16px;
+    background-color: #fff; }
+    @media screen and (min-width: 992px) {
+      .nav-bar .sidenav {
+        left: -250px;
+        max-width: 250px; } }
+    .nav-bar .sidenav.active {
+      /* display: block; */
+      left: 0;
+      transition: 0.5s; }

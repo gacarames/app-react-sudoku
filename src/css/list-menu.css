@@ -1,0 +1,31 @@
+/********** vars **********/
+/* colors */
+/* brack-points */
+.sdk-list-menu {
+  /* background-color: yellow; */
+  padding-inline-start: 24px;
+  list-style: none; }
+  .sdk-list-menu .sdk-menu-item {
+    /* background-color: greenyellow; */
+    padding: 12px 0; }
+    .sdk-list-menu .sdk-menu-item a {
+      /* background-color: pink; */
+      display: block;
+      color: #000;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: capitalize; }
+      .sdk-list-menu .sdk-menu-item a:active {
+        color: #757575;
+        outline: none; }
+      .sdk-list-menu .sdk-menu-item a:focus {
+        outline: none; }
+      .sdk-list-menu .sdk-menu-item a:hover {
+        color: #f68e01;
+        outline: none; }
+      .sdk-list-menu .sdk-menu-item a.teleshow:hover {
+        color: #d01122 !important; }
+      .sdk-list-menu .sdk-menu-item a.deportes:hover {
+        color: #7db206 !important; }
