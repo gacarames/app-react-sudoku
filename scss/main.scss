@@ -9,7 +9,7 @@ $break-extra-large: 1200px;
 
 body {
   color: #000;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
 }
 
@@ -17,13 +17,81 @@ body {
   /* padding: 0 16px; */
   /* width: 100%; */
 
+  .show > .btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(246, 142, 1, 0.5);
+  }
+
+  .show > .btn-outline-primary {
+    border: 1px solid #f68e01;
+    background: #f68e01;
+    color: #fff;
+  }
+
+  .dropdown > .btn-outline-primary:active {
+    border: 1px solid #f68e01;
+    background: #f68e01;
+    color: #fff;
+  }
+
+  .dropdown > .dropdown-toggle::after {
+    content: none !important;
+  }
+
+  .show > .dropdrown-item {
+    color: #000 !important;
+  }
+
+  .show > .dropdown-item-text {
+    font-size: 16px;
+  }
+
+  .show > .dropdown-item-text ~ .dropdown-item {
+    font-size: 16px;
+  }
+
+  .show > .dropdown-item.active {
+    background: #eeeeee;
+    color: #000;
+  }
+
+  .show > .dropdown-item:hover {
+    background: #eeeeee;
+    color: #000;
+  }
+
+  .show > .dropdown-item:active {
+    border: none;
+    // background: #f68e01;
+    // color: #000;
+  }
+
+  .btn-outline-primary {
+    color: $brand-color;
+    background-color: #fff;
+    border-color: $brand-color;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
   .sdk-heading {
     .title-game-wrapper {
+      width: 100%;
       .title {
         color: #000;
-        font-size: 28px;
+        font-size: 30px;
         font-weight: bold;
         margin: 0;
+        display: inline;
+        vertical-align: baseline;
+
+        @media screen and (min-width: $break-large) {
+          width: 100%;
+          display: block;
+          border-bottom: 1px solid #000;
+          font-size: 45px;
+          padding-bottom: 20px;
+        }
       }
     }
 
@@ -36,13 +104,9 @@ body {
       }
 
       .btn-outline-primary {
-        color: #fff;
-        background-color: $brand-color;
+        color: $brand-color;
+        background-color: #fff;
         border-color: $brand-color;
-      }
-
-      .dropdown-toggle::after {
-        content: none;
       }
     }
   }
@@ -76,6 +140,11 @@ body {
 
     .sdk-dashboard {
       /* padding: 16px; */
+      .btn-sdk-solve {
+        border-radius: 4px;
+        font-weight: normal;
+        font-size: 16px;
+      }
 
       .sdk-difficulty-level {
         &-group {
@@ -103,7 +172,7 @@ body {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 64px);
             grid-gap: 16px 16px;
-            padding: 16px;
+            padding: 16px 0 38px 0;
           }
 
           .choice {
@@ -114,7 +183,7 @@ body {
             cursor: pointer;
 
             @media screen and (min-width: $break-large) {
-              font-size: 58px;
+              font-size: 55px;
               line-height: 64px;
             }
           }
@@ -170,13 +239,14 @@ body {
 /*board*/
 .board {
   position: relative;
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 auto;
   display: grid;
   grid-template-rows: repeat(9, 1fr);
   width: 310px;
   height: 310px;
 
   @media screen and (min-width: $break-large) {
+    margin: 0 auto 0 0;
     width: 420px;
     height: 420px;
   }
@@ -205,7 +275,7 @@ body {
       background: rgba(0, 0, 0, 0);
       font-size: 1em;
       font-weight: bold;
-      color: #4285f4;
+      color: #000;
       padding: 0;
       border-width: 0 1px 0 0;
       border-style: solid;
@@ -232,26 +302,28 @@ body {
       &.filter {
         box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
         background-color: rgba(255, 13, 126, 0.2);
-        color: #4285f4;
+        color: #f68e01;
       }
       &.chosen {
-        background-color: rgba(155, 204, 20, 0.3);
+        background-color: rgba(246, 142, 1, 0.3);
+        color: #f68e01;
       }
       &.origin {
         background-color: rgba(200, 200, 200, 0.1);
-        color: #ea4335;
+        color: #000;
       }
       &.origin.highlight {
-        background-color: rgba(52, 168, 83, 0.2);
-        color: #ea4335;
+        background-color: #edebec;
+        color: #f68e01;
       }
       &.origin.filter {
         background-color: rgba(255, 13, 126, 0.2);
-        color: "#ea4335";
+        color: #f68e01;
       }
       &.conflict {
         background-color: rgba(255, 0, 0, 0.1);
         font-weight: 800;
+        color: #ea4335;
       }
       &.origin.conflict {
         background-color: rgba(255, 0, 0, 0.3);
@@ -260,6 +332,7 @@ body {
       &.chosen.conflict {
         background-color: rgba(255, 0, 0, 0.6);
         font-weight: 800;
+        color: #000;
       }
     }
   }
