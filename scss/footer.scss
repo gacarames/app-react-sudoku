@@ -1,0 +1,33 @@
+/* brack-points */
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1200px;
+
+.app-footer {
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    padding: 15px 0;
+    border-top: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+
+    @media screen and (min-width: $break-large) {
+      flex-direction: row;
+    }
+
+    .img-logo {
+      max-height: 20px;
+    }
+
+    .copyright {
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 40px;
+    }
+  }
+
+}

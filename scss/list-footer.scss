@@ -1,0 +1,59 @@
+/********** vars **********/
+/* colors */
+$brand-color: #f68e01;
+$deportes-color: #645398;
+$teleshow-color: #014274;
+$hover-color: #757575;
+
+/* brack-points */
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1200px;
+
+.sdk-list-menu {
+  /* background-color: yellow; */
+  padding-inline-start: 24px;
+  list-style: none;
+
+  .sdk-menu-item {
+    /* background-color: greenyellow; */
+    padding: 12px 0;
+
+    a {
+      /* background-color: pink; */
+      display: block;
+      color: #000;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: capitalize;
+
+      &:active {
+        color: $hover-color;
+        outline: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        color: $brand-color;
+        outline: none;
+      }
+
+      &.teleshow {
+        &:hover {
+          color: #d01122 !important;
+        }
+      }
+
+      &.deportes {
+        &:hover {
+          color: #7db206 !important;
+        }
+      }
+    }
+  }
+}

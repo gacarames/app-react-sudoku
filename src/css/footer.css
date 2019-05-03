@@ -1,0 +1,18 @@
+/* brack-points */
+.app-footer .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 15px 0;
+  border-top: 1px solid #D5D5D5;
+  border-bottom: 1px solid #D5D5D5; }
+  @media screen and (min-width: 992px) {
+    .app-footer .footer-wrapper {
+      flex-direction: row; } }
+  .app-footer .footer-wrapper .img-logo {
+    max-height: 20px; }
+  .app-footer .footer-wrapper .copyright {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 40px; }

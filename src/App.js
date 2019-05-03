@@ -5,7 +5,9 @@ import NavBar from "./NavBar";
 import adImg from "./img/ad.png";
 import TitleGame from "./TitleGame";
 import CurrentDif from "./CurrentDif";
-/* import Info from './Info' */
+import Info from './Info';
+import Footer from './Footer'
+
 
 class Board extends Component {
   getsquares(rowindex) {
@@ -395,6 +397,7 @@ class Game extends Component {
                   <div className="col-12">
                     <CurrentDif />
                   </div>
+                  
                 </div>
 
                 <div className="row">
@@ -461,10 +464,10 @@ class Game extends Component {
 
                       {/* <button className="check" onClick={this.check} /> */}
                     </div>
-                    {/* <Info /> */}
                   </div>
                 </div>
               </div>
+              <Info />
             </div>
             <div className="right-column col-lg-4">
               <div className="ad-slot col-12">
@@ -477,6 +480,7 @@ class Game extends Component {
             </div>
           </div>
         </div>
+        <Footer/>                                
       </div>
     );
   }
