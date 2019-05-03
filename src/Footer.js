@@ -8,7 +8,7 @@ export default class Footer extends Component {
             <footer className="app-footer">
                 <div className="footer-wrapper container">
                     <img src={logoImage} alt="Infobae" className="img-logo" />
-                    <span className="copyright"> Todos los derechos reservados © 2019 Infobae</span>
+                    <p className="copyright"> Todos los derechos reservados © 2019 Infobae</p>
                 </div>
             </footer>
         )

@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: baseline;
   padding: 15px 0;
-  border-top: 1px solid #D5D5D5;
-  border-bottom: 1px solid #D5D5D5; }
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5; }
   @media screen and (min-width: 992px) {
     .app-footer .footer-wrapper {
       flex-direction: row; } }
@@ -15,4 +15,11 @@
   .app-footer .footer-wrapper .copyright {
     font-size: 16px;
     line-height: 20px;
-    margin-left: 40px; }
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 0; }
+    @media screen and (min-width: 992px) {
+      .app-footer .footer-wrapper .copyright {
+        text-align: left;
+        width: initial;
+        margin: 0 0 0 40px; } }
