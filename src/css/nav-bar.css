@@ -24,7 +24,7 @@
     background-position: center center;
     background-size: cover; }
     .nav-bar .btn-toggle-menu:active {
-      background-color: fuchsia; }
+      /* background-color: fuchsia; */ }
     .nav-bar .btn-toggle-menu:focus, .nav-bar .btn-toggle-menu:hover {
       outline: none; }
     .nav-bar .btn-toggle-menu.close {

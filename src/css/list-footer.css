@@ -1,0 +1,30 @@
+/********** vars **********/
+/* colors */
+/* brack-points */
+.app-footer-links {
+  /* background-color: yellow; */
+  padding-inline-start: 0;
+  list-style: none; }
+  @media screen and (min-width: 992px) {
+    .app-footer-links {
+      column-count: 4; } }
+  .app-footer-links .footer-list-item {
+    line-height: 20px;
+    display: block;
+    text-align: left;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0; }
+    .app-footer-links .footer-list-item a {
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: capitalize; }
+      .app-footer-links .footer-list-item a:active {
+        color: #757575;
+        outline: none; }
+      .app-footer-links .footer-list-item a:focus {
+        outline: none; }
+      .app-footer-links .footer-list-item a:hover {
+        color: #f68e01;
+        outline: none; }

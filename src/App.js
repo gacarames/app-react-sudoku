@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import sudokus from "./Sudokus";
 import SudokuGenerator from "./SudokuGenerator";
 import NavBar from "./NavBar";
-import adImg from "./img/ad.png";
 import TitleGame from "./TitleGame";
 import CurrentDif from "./CurrentDif";
 import Info from './Info';
+import SlotAd from './SlotAd';
 import Footer from './Footer'
 
 
@@ -365,11 +365,10 @@ class Game extends Component {
     return (
       <div className="game">
         <NavBar />
-        <div className="container game-wrapper">
-          <div className="row">
-            <div className="left-column col-lg-8">
-              <div className="sdk-heading d-flex flex-row justify-content-between align-items-baseline my-3">
-                <TitleGame />
+        <div className="container game-wrapper mt-5">
+
+          <div className="sdk-heading d-flex flex-row justify-content-between align-items-baseline my-2">
+              <TitleGame />
                 <div className="sdk-difficulty-dropdown d-md-none">
                   <div className="dropdown">
                     <button
@@ -386,18 +385,22 @@ class Game extends Component {
                       className="dropdown-menu dropdown-menu-right"
                       aria-labelledby="dropdownMenu2"
                     >
+                    {/* <span className="dropdown-item-text">
+                            Elegí la dificultad del juego
+                          </span> */}
                       {controls}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="sdk-wrapper card mt-2 md-4 p-4">
+          <div className="row">
+            <div className="left-column col-lg-8">
+              <div className="sdk-wrapper card mt-2 md-4 p-3">
                 <div className="row">
                   <div className="col-12">
                     <CurrentDif />
                   </div>
-                  
                 </div>
 
                 <div className="row">
@@ -462,7 +465,7 @@ class Game extends Component {
                                             <p value={this.state.possible}>{this.state.possible}</p>
                                         </div> */}
 
-                      {/* <button className="check" onClick={this.check} /> */}
+                      {/* <button className="check" onClick={this.check} /> */}                      
                     </div>
                   </div>
                 </div>
@@ -470,17 +473,11 @@ class Game extends Component {
               <Info />
             </div>
             <div className="right-column col-lg-4">
-              <div className="ad-slot col-12">
-                <div className="ad-slot-wrapper d-flex justify-content-center my-3">
-                  <div className="add-box">
-                    <img src={adImg} alt="" />
-                  </div>
-                </div>
-              </div>
+              <SlotAd/>
             </div>
           </div>
         </div>
-        <Footer/>                                
+        <Footer />
       </div>
     );
   }

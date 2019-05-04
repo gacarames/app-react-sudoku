@@ -10,22 +10,26 @@ $break-medium: 768px;
 $break-large: 992px;
 $break-extra-large: 1200px;
 
-.sdk-list-menu {
+.app-footer-links {
   /* background-color: yellow; */
-  padding-inline-start: 24px;
+  padding-inline-start: 0;
   list-style: none;
 
-  .sdk-menu-item {
-    /* background-color: greenyellow; */
-    padding: 12px 0;
+  @media screen and (min-width: $break-large) {
+    column-count: 4;
+  }
+
+  .footer-list-item {
+    line-height: 20px;
+    display: block;
+    text-align: left;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
 
     a {
-      /* background-color: pink; */
-      display: block;
-      color: #000;
+      color: #333;
       font-size: 14px;
-      line-height: 20px;
-      font-weight: 600;
       text-decoration: none;
       text-transform: capitalize;
 
@@ -41,18 +45,6 @@ $break-extra-large: 1200px;
       &:hover {
         color: $brand-color;
         outline: none;
-      }
-
-      &.teleshow {
-        &:hover {
-          color: #d01122 !important;
-        }
-      }
-
-      &.deportes {
-        &:hover {
-          color: #7db206 !important;
-        }
       }
     }
   }

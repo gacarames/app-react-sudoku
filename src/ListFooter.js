@@ -3,28 +3,7 @@ import './css/list-footer.css';
 
 export default class ListFooter extends Component {
 
-    /* constructor(props) {
-        super(props);
-        this.state = {
-            level: 'Facil'
-        }
-    }
-
-    componentDidMount() {
-        this.setState({
-            level: document.querySelector('.active').innerHTML
-        });
-    }
-
-    componentWillUpdate() {
-        this.setState({
-            level: document.querySelector('.active').innerHTML
-        });
-    }
-    */
-
-    render() {
-        
+    render() {        
 
         var itemsFooter = [{
             name: 'Apps',
@@ -83,13 +62,13 @@ export default class ListFooter extends Component {
             url: 'https://www.infobae.com/terminos-y-condiciones/'
         }
         ].map(({ name, url}) => {
-            return <li className={`sdk-menu-item ${name}`} key={name}>
-                    <a href={url} >{name}</a>
+            return <li className={`footer-list-item`} key={name}>
+                    <a href={url}>{name}</a>
             </li>
         })
 
         return (
-            <ul className="sdk-list-menu">
+            <ul className="app-footer-links">
                 {itemsFooter}
             </ul>
         )
