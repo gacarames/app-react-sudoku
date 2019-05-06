@@ -176,6 +176,9 @@ body {
         border-radius: 4px;
         font-weight: normal;
         font-size: 16px;
+        &:hover {
+          background-color:#f68e01;
+        }
       }
 
       .sdk-difficulty-level {
@@ -278,7 +281,7 @@ body {
   height: 342px;
 
   @media screen and (min-width: $break-large) {
-    margin: 0 auto 0 0;
+    // margin: 0 auto 0 0;
     width: 420px;
     height: 420px;
   }
@@ -292,12 +295,11 @@ body {
     height: 11.11111% */
 
     &:nth-child(1) {
-      border-top: 1px solid #000;
+      border-top: 2px solid #000;
     }
 
     &:nth-child(3n) {
-      /* border-bottom: 1px solid #000; */
-      /* margin-bottom: -2px; */
+      border-bottom: 2px solid #000; 
     }
 
     .square {
@@ -319,11 +321,11 @@ body {
       }
 
       &:nth-child(1) {
-        border-left: 1px solid #000;
+        border-left: 2px solid #000;
       }
 
       &:nth-child(3n) {
-        border-right: 1px solid #000;
+        border-right: 2px solid #000;
       }
 
       .highlight {
@@ -331,11 +333,11 @@ body {
         animation: highlight 2s;
       }
 
-      &.filter {
-        box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
-        background-color: rgba(255, 13, 126, 0.2);
-        color: #f68e01;
-      }
+      // &.filter {
+      //   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
+      //   background-color: rgba(255, 13, 126, 0.2);
+      //   color: #f68e01;
+      // }
       &.chosen {
         background-color: rgba(246, 142, 1, 0.3);
         color: #f68e01;
@@ -349,8 +351,8 @@ body {
         color: #f68e01;
       }
       &.origin.filter {
-        background-color: rgba(255, 13, 126, 0.2);
-        color: #f68e01;
+        background-color: rgba(246, 152, 1, 1);
+        color: #ffffff;
       }
       &.conflict {
         background-color: rgba(255, 0, 0, 0.1);
