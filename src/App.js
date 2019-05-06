@@ -263,13 +263,23 @@ class Game extends Component {
       this.filter(thisvalue[j]);
       return;
     } else {
-      this.highlight(i, j);
+      var filter = new Set();
+      if (thisvalue[j] != null && thisvalue.includes(thisvalue[j])) {
+        for (let m = 0; m < 9; m++) {
+          for (let n = 0; n < 9; n++) {
+            if (values[m][n] === thisvalue[j]) {
+              filter.add(m + "" + n);
+            }
+          }
+        }
+      }
+      // this.highlight(i, j);
       var chosen = i + "" + j;
       var possible = Array.from(this.checkPossible(i, j)).toString();
       this.setState({
         chosen: chosen,
         possible: possible,
-        filter: new Set(),
+        filter: filter,
         check: false
       });
     }
@@ -368,31 +378,31 @@ class Game extends Component {
         <div className="container game-wrapper mt-5">
 
           <div className="sdk-heading d-flex flex-row justify-content-between align-items-baseline my-2">
-              <TitleGame />
-                <div className="sdk-difficulty-dropdown d-md-none">
-                  <div className="dropdown">
-                    <button
-                      className="btn btn-link dropdown-toggle"
-                      type="button"
-                      id="dropdownMenu2"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      Nueva partida
+            <TitleGame />
+            <div className="sdk-difficulty-dropdown d-md-none">
+              <div className="dropdown">
+                <button
+                  className="btn btn-link dropdown-toggle"
+                  type="button"
+                  id="dropdownMenu2"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Nueva partida
                     </button>
-                    <div
-                      className="dropdown-menu dropdown-menu-right"
-                      aria-labelledby="dropdownMenu2"
-                    >
-                    {/* <span className="dropdown-item-text">
+                <div
+                  className="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="dropdownMenu2"
+                >
+                  {/* <span className="dropdown-item-text">
                             Elegí la dificultad del juego
                           </span> */}
-                      {controls}
-                    </div>
-                  </div>
+                  {controls}
                 </div>
               </div>
+            </div>
+          </div>
 
           <div className="row">
             <div className="left-column col-lg-8">
@@ -465,7 +475,7 @@ class Game extends Component {
                                             <p value={this.state.possible}>{this.state.possible}</p>
                                         </div> */}
 
-                      {/* <button className="check" onClick={this.check} /> */}                      
+                      {/* <button className="check" onClick={this.check} /> */}
                     </div>
                   </div>
                 </div>
@@ -473,7 +483,7 @@ class Game extends Component {
               <Info />
             </div>
             <div className="right-column col-lg-4">
-              <SlotAd/>
+              <SlotAd />
             </div>
           </div>
         </div>

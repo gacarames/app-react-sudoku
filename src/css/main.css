@@ -233,10 +233,10 @@ body {
         background-color: #f69801;
         color: #ffffff; }
       .board .board-row .square.chosen {
-        background-color: rgba(246, 142, 1, 0.3);
-        color: #f68e01; }
+        background-color: #f69801;
+        color: #ffffff; }
       .board .board-row .square.origin {
-        background-color: rgba(200, 200, 200, 0.1);
+        background-color: rgba(200, 200, 200, 0.25);
         color: #000; }
       .board .board-row .square.origin.highlight {
         background-color: #edebec;
