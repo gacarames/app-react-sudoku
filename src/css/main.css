@@ -229,6 +229,9 @@ body {
       .board .board-row .square .highlight {
         background-color: rgba(52, 168, 83, 0.2);
         animation: highlight 2s; }
+      .board .board-row .square.filter {
+        background-color: #f69801;
+        color: #ffffff; }
       .board .board-row .square.chosen {
         background-color: rgba(246, 142, 1, 0.3);
         color: #f68e01; }
