@@ -16,9 +16,9 @@ export default class CurrentDif extends Component {
   }
 
   componentWillUpdate() {
-    this.setState({
-      level: document.querySelector(".active").innerHTML
-    });
+    // this.setState({
+    //   level: document.querySelector(".active").innerHTML
+    // });
   }
 
   render() {
@@ -26,7 +26,7 @@ export default class CurrentDif extends Component {
       <div className="sdk-current-dif-wrapper mb-2">
         <span className="sdk-difficulty">{`Dificultad: ${
           this.state.level
-        }`}</span>
+          }`}</span>
       </div>
     );
   }
