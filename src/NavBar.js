@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ListMenu from './ListMenu';
+
+import { NavLink } from 'react-router-dom'
+
 import './css/nav-bar.css';
 import logoImage from './img/icons/logo-infobae.svg';
 
@@ -43,7 +46,18 @@ export default class NavBar extends Component {
                 <img src={logoImage} alt="Infobae" className="img-logo" />
 
                 <div /* style={hidden} */ className={`sidenav ${hidden}`}>
+                    
                     <ListMenu />
+
+                    <NavLink className="sdk-list-menu" exact to="/">
+                        Inicio
+					</NavLink>
+                    <NavLink className="sdk-list-menu" exact to="/sudoku" >
+                        Sudoku
+					</NavLink>
+                    <NavLink className="sdk-list-menu" exact to="/title" >
+                        Titulo
+					</NavLink>
                 </div>
 
             </div>

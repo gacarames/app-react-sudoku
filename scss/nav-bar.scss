@@ -16,13 +16,14 @@ $break-extra-large: 1200px;
 }
 
 .nav-bar {
+  /* position: fixed; */
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #fff;
   width: 100%;
   height: 42px;
-  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.12);
   z-index: 99;
 
   .btn-toggle-menu {
@@ -66,7 +67,7 @@ $break-extra-large: 1200px;
     max-width: 300px;
     position: fixed;
     z-index: 9;
-    top: 52px;
+    top: 40px;
     /* left: 0; */
     overflow-x: hidden;
     transition: 0.5s;
@@ -81,6 +82,7 @@ $break-extra-large: 1200px;
     &.active {
       /* display: block; */
       left: 0;
+      box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.12);
       transition: 0.5s;
     }
   }

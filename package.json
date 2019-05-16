@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "react": "^15.3.2",
+    "react-confirm-alert": "^2.4.1",
     "react-dom": "^15.3.2",
     "sass": "^1.18.0"
   },

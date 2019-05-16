@@ -6,7 +6,8 @@ export default class Info extends Component {
             <div className="about py-4">
                 <div className="showabout"></div>
                 <div className="aboutme">
-                    <p>Complete cada tablero (subdividido en 9 cuadrados) de 81 casillas (dispuestos en 9 filas verticales y horizontales) llenando los casilleros vacíos con los numero del 1 al 9, de modo que no se repita ninguna cifra en fila vertical ni horizontal, ni en cada cuadrado.</p>
+                    <p>El objetivo del juego es completar el tablero de 81 casilleros completando cada uno con números del 1 al 9.  No se debe repetir ninguna cifra, ni en fila vertical, ni en columna horizontal, ni en cada uno de los 9 cuadrados marcados en el tablero.</p>
+                    <p>Para completar o borrar los datos de los casilleros utilizar el teclado de la pantalla o del dispositivo que esté usando</p>
                 </div>
             </div>
         )

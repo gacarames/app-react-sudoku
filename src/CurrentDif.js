@@ -15,18 +15,16 @@ export default class CurrentDif extends Component {
     });
   }
 
-  componentWillUpdate() {
-    // this.setState({
-    //   level: document.querySelector(".active").innerHTML
-    // });
-  }
+  /* componentWillUpdate() {
+    this.setState({
+    level: document.querySelector(".active").innerHTML
+    });
+  } */
 
   render() {
     return (
       <div className="sdk-current-dif-wrapper mb-2">
-        <span className="sdk-difficulty">{`Dificultad: ${
-          this.state.level
-          }`}</span>
+        <span className="sdk-difficulty">{`Dificultad: ${this.state.level}`}</span>
       </div>
     );
   }

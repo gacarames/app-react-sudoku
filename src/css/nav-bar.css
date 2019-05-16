@@ -3,13 +3,14 @@
 /* brack-points */
 /* mixin */
 .nav-bar {
+  /* position: fixed; */
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #fff;
   width: 100%;
   height: 42px;
-  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.12);
   z-index: 99; }
   .nav-bar .btn-toggle-menu {
     width: 24px;
@@ -41,7 +42,7 @@
     max-width: 300px;
     position: fixed;
     z-index: 9;
-    top: 52px;
+    top: 40px;
     /* left: 0; */
     overflow-x: hidden;
     transition: 0.5s;
@@ -54,4 +55,5 @@
     .nav-bar .sidenav.active {
       /* display: block; */
       left: 0;
+      box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.12);
       transition: 0.5s; }

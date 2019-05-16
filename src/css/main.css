@@ -1,6 +1,9 @@
 /********** vars **********/
 /* colors */
 /* brack-points */
+*:focus {
+  outline: none !important; }
+
 body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
@@ -23,9 +26,18 @@ body {
         font-size: 45px;
         padding-bottom: 16px; } }
 
+.dropdown-menu .btn-level.active {
+  color: #000;
+  background-color: #fff; }
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff; }
+
 .sdk-difficulty-dropdown {
-  display: flex;
-  align-items: flex-end; }
+  display: flex; }
   .sdk-difficulty-dropdown .btn-link {
     color: #f68e01;
     font-weight: 600;
@@ -96,6 +108,10 @@ body {
     font-weight: 600;
     text-decoration: none;
     padding: 0; }
+  .left-column .sdk-heading .sdk-difficulty-dropdown .btn-level.active {
+    color: #fff;
+    text-decoration: none;
+    background-color: red !important; }
   .left-column .sdk-heading .sdk-difficulty-dropdown .btn-outline-primary {
     color: #f68e01;
     background-color: #fff;
@@ -109,11 +125,13 @@ body {
 
 .left-column .sdk-wrapper.card {
   flex-direction: column;
-  border-radius: 0.75rem; }
+  border-radius: 0.75rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   @media screen and (min-width: 992px) {
     .left-column .sdk-wrapper.card {
       /* flex-direction: row; */
-      padding: 1.5rem !important; } }
+      padding: 1.5rem 1.75rem !important; } }
 
 .left-column .sdk-wrapper > div {
   /* padding: 16px; */ }
@@ -122,13 +140,23 @@ body {
       padding: 0px; } }
 
 .left-column .sdk-wrapper .sdk-dashboard {
-  /* padding: 16px; */ }
-  .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-solve {
-    border-radius: 4px;
-    font-weight: normal;
-    font-size: 16px; }
-    .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-solve:hover {
-      background-color: #f68e01; }
+  display: flex;
+  flex-direction: column;
+  align-content: space-between; }
+  .left-column .sdk-wrapper .sdk-dashboard .sdk-helps {
+    width: 100%; }
+    .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve {
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 18px; }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:active {
+        background-color: #f68e01; }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve.peep {
+        font-size: 16px;
+        color: #000;
+        background-color: #fff;
+        pointer-events: none;
+        transition: background-color 0.65s; }
   .left-column .sdk-wrapper .sdk-dashboard .sdk-difficulty-level-group .btn-level {
     color: #f68e01;
     border-color: #f68e01; }
@@ -136,23 +164,27 @@ body {
       background-color: #f68e01;
       color: #fff; }
   .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    /* grid-gap: 16px 16px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
     padding: 16px 0; }
     @media screen and (min-width: 992px) {
       .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 64px);
         grid-gap: 16px 16px;
-        padding: 16px 0 38px 0; } }
+        padding: 27px 0 27px 0; } }
     .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
       font-size: 32px;
       line-height: 36px;
       background: none;
       border: none;
       cursor: pointer; }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:active {
+        background-color: rgba(238, 238, 238, 0.48);
+        border-radius: 3px; }
       @media screen and (min-width: 992px) {
         .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
           font-size: 55px;
@@ -198,14 +230,14 @@ body {
   .board .board-row {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #c6c6c6;
     /* margin-bottom: -1px; */
     /* width: 100%;
     height: 11.11111% */ }
     .board .board-row:nth-child(1) {
-      border-top: 2px solid #000; }
+      border-top: 1px solid #000; }
     .board .board-row:nth-child(3n) {
-      border-bottom: 2px solid #000; }
+      border-bottom: 1px solid #000; }
     .board .board-row .square {
       width: 100%;
       height: 100%;
@@ -217,15 +249,15 @@ body {
       padding: 0;
       border-width: 0 1px 0 0;
       border-style: solid;
-      border-color: #000;
+      border-color: #c6c6c6;
       cursor: pointer; }
       @media screen and (min-width: 992px) {
         .board .board-row .square {
           font-size: 1.5em; } }
       .board .board-row .square:nth-child(1) {
-        border-left: 2px solid #000; }
+        border-left: 1px solid #000; }
       .board .board-row .square:nth-child(3n) {
-        border-right: 2px solid #000; }
+        border-right: 1px solid #000; }
       .board .board-row .square .highlight {
         background-color: rgba(52, 168, 83, 0.2);
         animation: highlight 2s; }
@@ -233,7 +265,7 @@ body {
         background-color: #f69801;
         color: #ffffff; }
       .board .board-row .square.chosen {
-        background-color: #f69801;
+        background-color: rgba(246, 152, 1, 0.56);
         color: #ffffff; }
       .board .board-row .square.origin {
         background-color: rgba(200, 200, 200, 0.25);
@@ -302,3 +334,28 @@ body {
     background-color: rgba(251, 188, 5, 0.2); }
   .hint.zero {
     background-color: rgba(255, 13, 126, 0.2); }
+
+/* confirm modal */
+body.react-confirm-alert-body-element {
+  overflow: auto; }
+  body.react-confirm-alert-body-element .react-confirm-alert-body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: initial;
+    padding: 24px;
+    text-align: left;
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #000; }
+    body.react-confirm-alert-body-element .react-confirm-alert-body h1 {
+      font-size: 32px; }
+    body.react-confirm-alert-body-element .react-confirm-alert-body .react-confirm-alert-button-group {
+      justify-content: flex-end;
+      margin-top: 32px; }
+      body.react-confirm-alert-body-element .react-confirm-alert-body .react-confirm-alert-button-group button {
+        width: 72px;
+        color: #fff;
+        background: #f68e01;
+        margin-right: 0px;
+        margin-left: 16px;
+        border-radius: 3px; }
