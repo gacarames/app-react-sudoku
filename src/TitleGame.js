@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './css/title-game.css';
 
 export default class TitleGame extends Component {
 
@@ -12,9 +13,8 @@ export default class TitleGame extends Component {
     render() {
         return (
             <div className="title-game-wrapper">
-                <h1 className="title">{this.state.title}</h1>
+                <h1 className={"title " + this.props.align}>{this.state.title}</h1>
             </div>
         )
     }
 }
-/* export default TitleGame */

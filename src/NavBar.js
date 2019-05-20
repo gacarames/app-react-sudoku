@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+
+import ClickOutHandler from 'react-onclickout';
+
 import ListMenu from './ListMenu';
 
-import { NavLink } from 'react-router-dom'
+/* import { NavLink } from 'react-router-dom' */
 
 import './css/nav-bar.css';
+
 import logoImage from './img/icons/logo-infobae.svg';
 
 export default class NavBar extends Component {
+
     constructor() {
         super();
 
         this.state = {
             shown: true,
             condition: false
-        }
-
+        };
     }
 
     toggle() {
@@ -24,19 +28,23 @@ export default class NavBar extends Component {
         });
     }
 
-    render() {
+    onClickOut(e) {
 
-        /* var hidden = {
-            display: this.state.shown ? "none" : "block"
-        } */
+        if (e.target.classList.contains('btn-toggle-menu')) return;
+
+        this.setState({
+            shown: true,
+            condition: false
+        });
+
+        /* console.log('user clicked outside of the component!'); */
+    }
+
+    render() {
 
         var hidden = this.state.shown ? "" : "active";
 
         var condition = this.state.condition ? "close" : "";
-
-        /* var condition = {
-            display: this.state.condition ? "button toggled" : "button"
-        }; */
 
         return (
             <div className="nav-bar">
@@ -45,20 +53,12 @@ export default class NavBar extends Component {
 
                 <img src={logoImage} alt="Infobae" className="img-logo" />
 
-                <div /* style={hidden} */ className={`sidenav ${hidden}`}>
-                    
-                    <ListMenu />
+                <ClickOutHandler onClickOut={this.onClickOut.bind(this)}>
+                    <div className={`sidenav ${hidden}`}>
+                        <ListMenu />
+                    </div>
+                </ClickOutHandler>
 
-                    <NavLink className="sdk-list-menu" exact to="/">
-                        Inicio
-					</NavLink>
-                    <NavLink className="sdk-list-menu" exact to="/sudoku" >
-                        Sudoku
-					</NavLink>
-                    <NavLink className="sdk-list-menu" exact to="/title" >
-                        Titulo
-					</NavLink>
-                </div>
 
             </div>
         )

@@ -4,8 +4,6 @@ import sudokus from "./Sudokus";
 
 import SudokuGenerator from "./SudokuGenerator";
 
-/* import NavBar from "./NavBar"; */
-
 import Board from "./Board";
 
 import TitleGame from "./TitleGame";
@@ -15,8 +13,6 @@ import CurrentDif from "./CurrentDif";
 import Info from './Info';
 
 import SlotAd from './SlotAd';
-
-/* import Footer from './Footer'; */
 
 import { confirmAlert } from 'react-confirm-alert'; // Import
 
@@ -363,10 +359,13 @@ export default class Sudoku extends Component {
     });
 
     var controls = [
-      /* 'Muy simple',  */ "Fácil",
+      /* 'Muy simple',  */ 
+      "Fácil",
       "Medio",
-      "Dificil" /* , 'Muy dificil' */
+      "Dificil"
+       /* , 'Muy dificil' */
     ].map((level, index) => {
+      
       var active = level === this.state.level ? " active" : "";
 
       return (
@@ -383,7 +382,6 @@ export default class Sudoku extends Component {
 
     return (
       <div className="game">
-        {/* <NavBar /> */}
         <div className="container game-wrapper mt-5">
 
           <div className="sdk-heading d-flex flex-row justify-content-between align-items-baseline my-2">
@@ -404,15 +402,11 @@ export default class Sudoku extends Component {
                   className="dropdown-menu dropdown-menu-right"
                   aria-labelledby="dropdownMenu2"
                 >
-                  {/* <span className="dropdown-item-text">
-                            Elegí la dificultad del juego
-                          </span> */}
                   {controls}
                 </div>
               </div>
             </div>
           </div>
-
           <div className="row">
             <div className="left-column col-lg-8">
               <div className="sdk-wrapper card mt-2 md-4 p-3">
@@ -475,8 +469,6 @@ export default class Sudoku extends Component {
                         aria-pressed="false"
                       >
                         {this.state.btnSolveValue}
-
-                        {/* Resolver */}
                       </button>
 
                       {/* <button className={"hint" + hinttime} onClick={this.help} /> */}

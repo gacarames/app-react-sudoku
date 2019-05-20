@@ -29,6 +29,10 @@ $break-extra-large: 1200px;
       text-decoration: none;
       text-transform: capitalize;
 
+      &.selected {
+        color: $brand-color;
+      }
+
       &:active {
         color: $hover-color;
         outline: none;

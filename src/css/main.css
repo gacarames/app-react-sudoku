@@ -9,23 +9,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff; }
 
-.title-game-wrapper {
-  width: 100%; }
-  .title-game-wrapper .title {
-    color: #000;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    display: inline;
-    vertical-align: baseline; }
-    @media screen and (min-width: 992px) {
-      .title-game-wrapper .title {
-        width: 100%;
-        display: block;
-        border-bottom: 1px solid #000;
-        font-size: 45px;
-        padding-bottom: 16px; } }
-
 .dropdown-menu .btn-level.active {
   color: #000;
   background-color: #fff; }
@@ -117,103 +100,107 @@ body {
     background-color: #fff;
     border-color: #f68e01; }
 
-@media screen and (min-width: 992px) {
-  .left-column .sdk-wrapper {
-    /* display: flex;
+.left-column .sdk-wrapper {
+  /* .sdk-board {
+    } */ }
+  @media screen and (min-width: 992px) {
+    .left-column .sdk-wrapper {
+      /* display: flex;
           flex-direction: row;
           padding: 32px; */ } }
-
-.left-column .sdk-wrapper.card {
-  flex-direction: column;
-  border-radius: 0.75rem;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  @media screen and (min-width: 992px) {
-    .left-column .sdk-wrapper.card {
-      /* flex-direction: row; */
-      padding: 1.5rem 1.75rem !important; } }
-
-.left-column .sdk-wrapper > div {
-  /* padding: 16px; */ }
-  @media screen and (min-width: 992px) {
-    .left-column .sdk-wrapper > div {
-      padding: 0px; } }
-
-.left-column .sdk-wrapper .sdk-dashboard {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between; }
-  .left-column .sdk-wrapper .sdk-dashboard .sdk-helps {
-    width: 100%; }
-    .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve {
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 18px; }
-      .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:active {
-        background-color: #f68e01; }
-      .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve.peep {
-        font-size: 16px;
-        color: #000;
-        background-color: #fff;
-        pointer-events: none;
-        transition: background-color 0.65s; }
-  .left-column .sdk-wrapper .sdk-dashboard .sdk-difficulty-level-group .btn-level {
-    color: #f68e01;
-    border-color: #f68e01; }
-    .left-column .sdk-wrapper .sdk-dashboard .sdk-difficulty-level-group .btn-level.active {
-      background-color: #f68e01;
-      color: #fff; }
-  .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 16px 0; }
-    @media screen and (min-width: 992px) {
-      .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 64px);
-        grid-gap: 16px 16px;
-        padding: 27px 0 27px 0; } }
-    .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
-      font-size: 32px;
-      line-height: 36px;
-      background: none;
-      border: none;
-      cursor: pointer; }
-      .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:active {
-        background-color: rgba(238, 238, 238, 0.48);
-        border-radius: 3px; }
-      @media screen and (min-width: 992px) {
-        .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
-          font-size: 55px;
-          line-height: 64px; } }
-  .left-column .sdk-wrapper .sdk-dashboard .btn:focus {
-    outline: 0;
-    box-shadow: none; }
-  .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete {
-    padding: 0 4px;
+  .left-column .sdk-wrapper.card {
+    flex-direction: column;
+    border-radius: 0.75rem;
     border: none;
-    background: none; }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
     @media screen and (min-width: 992px) {
-      .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete {
-        grid-column-start: 2; } }
-    .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete:after {
-      display: block;
-      content: "";
-      height: 28px;
-      width: 28px;
-      background: url(../img/icons/eraser.svg);
-      background-size: contain; }
+      .left-column .sdk-wrapper.card {
+        /* flex-direction: row; */
+        padding: 1.5rem 1.75rem !important; } }
+  .left-column .sdk-wrapper > div {
+    /* padding: 16px; */ }
+    @media screen and (min-width: 992px) {
+      .left-column .sdk-wrapper > div {
+        padding: 0px; } }
+  .left-column .sdk-wrapper .sdk-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    /* .sdk-helps {
+      } */
+    /* .sdk-helps {
+      } */ }
+    .left-column .sdk-wrapper .sdk-dashboard .sdk-helps {
+      width: 100%; }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve {
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 18px; }
+        .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve:active {
+          background-color: #f68e01; }
+        .left-column .sdk-wrapper .sdk-dashboard .sdk-helps .btn-sdk-solve.peep {
+          font-size: 16px;
+          color: #000;
+          background-color: #fff;
+          pointer-events: none;
+          transition: background-color 0.65s; }
+    .left-column .sdk-wrapper .sdk-dashboard .sdk-difficulty-level-group .btn-level {
+      color: #f68e01;
+      border-color: #f68e01; }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-difficulty-level-group .btn-level.active {
+        background-color: #f68e01;
+        color: #fff; }
+    .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-content: center;
+      padding: 16px 0; }
       @media screen and (min-width: 992px) {
-        .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete:after {
-          height: 42px;
-          width: 42px; } }
-  .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-solve {
-    color: #fff;
-    font-weight: bold;
-    background-color: #d5d5d5; }
+        .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 64px);
+          grid-gap: 16px 16px;
+          padding: 27px 0 27px 0; } }
+      .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
+        font-size: 32px;
+        line-height: 36px;
+        background: none;
+        border: none;
+        cursor: pointer; }
+        .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:hover, .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice:active {
+          background-color: rgba(238, 238, 238, 0.48);
+          border-radius: 3px; }
+        @media screen and (min-width: 992px) {
+          .left-column .sdk-wrapper .sdk-dashboard .sdk-options .sdk-number-options .choice {
+            font-size: 55px;
+            line-height: 64px; } }
+    .left-column .sdk-wrapper .sdk-dashboard .btn:focus {
+      outline: 0;
+      box-shadow: none; }
+    .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete {
+      padding: 0 4px;
+      border: none;
+      background: none; }
+      @media screen and (min-width: 992px) {
+        .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete {
+          grid-column-start: 2; } }
+      .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete:after {
+        display: block;
+        content: "";
+        height: 28px;
+        width: 28px;
+        background: url(../img/icons/eraser.svg);
+        background-size: contain; }
+        @media screen and (min-width: 992px) {
+          .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-delete:after {
+            height: 42px;
+            width: 42px; } }
+    .left-column .sdk-wrapper .sdk-dashboard .btn-sdk-solve {
+      color: #fff;
+      font-weight: bold;
+      background-color: #d5d5d5; }
 
 /*board*/
 .board {

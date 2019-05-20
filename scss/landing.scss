@@ -1,4 +1,14 @@
-.app-landing {
+.sdk-landing {
     height: 100vh;
-    background-color: Cyan;
+    background-color: #fff;
+
+    .sdk-landing-wrapper {
+        padding: 0 32px;
+        height: 100%;
+    }
+
+    .about-wrapper {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }

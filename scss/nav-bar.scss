@@ -16,7 +16,9 @@ $break-extra-large: 1200px;
 }
 
 .nav-bar {
-  /* position: fixed; */
+  position: fixed;
+  top:0;
+  left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,9 +41,9 @@ $break-extra-large: 1200px;
     background-position: center center;
     background-size: cover;
 
-    &:active {
-      /* background-color: fuchsia; */
-    }
+    /* &:active {
+      background-color: fuchsia;
+    } */
 
     &:focus,
     &:hover {
@@ -67,8 +69,7 @@ $break-extra-large: 1200px;
     max-width: 300px;
     position: fixed;
     z-index: 9;
-    top: 40px;
-    /* left: 0; */
+    top: 45px;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 16px;

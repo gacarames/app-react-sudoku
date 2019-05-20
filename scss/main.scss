@@ -17,26 +17,6 @@ body {
   background-color: #fff;
 }
 
-.title-game-wrapper {
-  width: 100%;
-  .title {
-    color: #000;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    display: inline;
-    vertical-align: baseline;
-
-    @media screen and (min-width: $break-large) {
-      width: 100%;
-      display: block;
-      border-bottom: 1px solid #000;
-      font-size: 45px;
-      padding-bottom: 16px;
-    }
-  }
-}
-
 .dropdown-menu .btn-level.active {
   color: #000;
   background-color: #fff;
@@ -188,8 +168,8 @@ body {
       }
     }
 
-    .sdk-board {
-    }
+    /* .sdk-board {
+    } */
 
     .sdk-dashboard {
       display: flex;
@@ -270,8 +250,8 @@ body {
         }
       }
 
-      .sdk-helps {
-      }
+      /* .sdk-helps {
+      } */
 
       .btn:focus {
         outline: 0;
@@ -310,8 +290,8 @@ body {
         }
       }
 
-      .sdk-helps {
-      }
+      /* .sdk-helps {
+      } */
     }
   }
 }

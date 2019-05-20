@@ -17,6 +17,8 @@
       font-weight: 600;
       text-decoration: none;
       text-transform: capitalize; }
+      .sdk-list-menu .sdk-menu-item a.selected {
+        color: #f68e01; }
       .sdk-list-menu .sdk-menu-item a:active {
         color: #757575;
         outline: none; }

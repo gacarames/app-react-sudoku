@@ -10,6 +10,8 @@
     "react": "^15.3.2",
     "react-confirm-alert": "^2.4.1",
     "react-dom": "^15.3.2",
+    "react-onclickout": "^2.0.8",
+    "react-onclickoutside": "^6.8.0",
     "sass": "^1.18.0"
   },
   "scripts": {

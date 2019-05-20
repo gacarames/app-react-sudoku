@@ -1,32 +1,10 @@
 import React, { Component } from 'react';
-
+import { NavLink } from 'react-router-dom';
 import './css/list-menu.css';
 
 export default class ListMenu extends Component {
 
-    /* constructor(props) {
-        super(props);
-        this.state = {
-            level: 'Facil'
-        }
-    }
-
-    componentDidMount() {
-        this.setState({
-            level: document.querySelector('.active').innerHTML
-        });
-    }
-
-    componentWillUpdate() {
-        this.setState({
-            level: document.querySelector('.active').innerHTML
-        });
-    }
-    */
-
     render() {
-        
-
         var itemsMenu = [{
             name: 'argentina',
             url: 'https://www.infobae.com/?noredirect'
@@ -43,17 +21,22 @@ export default class ListMenu extends Component {
             name: 'teleshow',
             url: 'https://www.infobae.com/teleshow/'
         }
-        ].map(({ name, url}) => {
+        ].map(({ name, url }) => {
             return <li className={`sdk-menu-item ${name}`} key={name}>
-                    <a href={url} >{name}</a>
+                <a href={url} >{name}</a>
             </li>
         })
 
         return (
             <ul className="sdk-list-menu">
                 {itemsMenu}
+                <li className="sdk-menu-item">
+                    <NavLink exact to="/" activeClassName="selected">Inicio</NavLink>
+                </li>
+                <li className="sdk-menu-item">
+                    <NavLink exact to="/sudoku" activeClassName="selected">Sudoku</NavLink>
+                </li>
             </ul>
         )
-
     }
 }

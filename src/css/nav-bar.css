@@ -3,7 +3,9 @@
 /* brack-points */
 /* mixin */
 .nav-bar {
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,9 +25,10 @@
     background-image: url(../img/icons/icon-menu.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; }
-    .nav-bar .btn-toggle-menu:active {
-      /* background-color: fuchsia; */ }
+    background-size: cover;
+    /* &:active {
+      background-color: fuchsia;
+    } */ }
     .nav-bar .btn-toggle-menu:focus, .nav-bar .btn-toggle-menu:hover {
       outline: none; }
     .nav-bar .btn-toggle-menu.close {
@@ -42,8 +45,7 @@
     max-width: 300px;
     position: fixed;
     z-index: 9;
-    top: 40px;
-    /* left: 0; */
+    top: 45px;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 16px;
