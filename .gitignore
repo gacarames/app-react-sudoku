@@ -15,3 +15,9 @@ build
 npm-debug.log
 
 .vscode
+
+#.gitignore build deploy local - heroku 
+#src/*
+#public/*
+#build/static/css/*.map
+#build/static/js/*.map

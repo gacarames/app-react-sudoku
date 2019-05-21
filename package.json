@@ -2,6 +2,9 @@
   "name": "play-sudoku",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.10.0"
+  },
   "devDependencies": {
     "node-sass": "^4.12.0",
     "react-scripts": "0.7.0"
