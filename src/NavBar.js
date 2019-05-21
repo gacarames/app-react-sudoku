@@ -4,8 +4,6 @@ import ClickOutHandler from 'react-onclickout';
 
 import ListMenu from './ListMenu';
 
-/* import { NavLink } from 'react-router-dom' */
-
 import './css/nav-bar.css';
 
 import logoImage from './img/icons/logo-infobae.svg';
@@ -58,8 +56,7 @@ export default class NavBar extends Component {
                         <ListMenu />
                     </div>
                 </ClickOutHandler>
-
-
+                
             </div>
         )
     }

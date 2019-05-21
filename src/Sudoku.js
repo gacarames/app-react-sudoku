@@ -239,21 +239,6 @@ export default class Sudoku extends Component {
         }
       ]
     });
-    
-    /* var r = confirm("¿Seguro que quieres resolver el juego?"); */
-    
-    /* if (!r) {
-      return;
-    } else {
-      this.setState({
-        values: this.solution,
-        peep: true,
-        conflict: new Set(),
-        highlight: new Set(),
-        filter: new Set(),
-        btnSolveValue: "Partida Finalizada" 
-      });
-    } */
 
   }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+/* import { NavLink } from 'react-router-dom'; */
 import './css/list-menu.css';
 
 export default class ListMenu extends Component {
@@ -20,23 +20,29 @@ export default class ListMenu extends Component {
         {
             name: 'teleshow',
             url: 'https://www.infobae.com/teleshow/'
+        },
+        {
+            name: 'Registrate al Newsletter',
+            url: 'https://www.infobae.com/newsletter/'
         }
         ].map(({ name, url }) => {
             return <li className={`sdk-menu-item ${name}`} key={name}>
                 <a href={url} >{name}</a>
             </li>
         })
-
         return (
             <ul className="sdk-list-menu">
                 {itemsMenu}
-                <li className="sdk-menu-item">
+                {/* <li className="sdk-menu-item">
                     <NavLink exact to="/" activeClassName="selected">Inicio</NavLink>
                 </li>
                 <li className="sdk-menu-item">
                     <NavLink exact to="/sudoku" activeClassName="selected">Sudoku</NavLink>
-                </li>
+                </li> */}
             </ul>
+            
         )
     }
+
+    
 }
