@@ -21,6 +21,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 export default class Sudoku extends Component {
   constructor(props) {
     super(props);
+
     this.check = this.check.bind(this);
     this.solve = this.solve.bind(this);
     this.help = this.help.bind(this);
@@ -262,7 +263,7 @@ export default class Sudoku extends Component {
           }
         }
       }
-      // this.highlight(i, j);
+      this.highlight(i, j);
       var chosen = i + "" + j;
       var possible = Array.from(this.checkPossible(i, j)).toString();
       this.setState({
@@ -278,11 +279,15 @@ export default class Sudoku extends Component {
     if (this.state.peep) {
       return;
     }
+
     var chosen = this.state.chosen;
+
     if (!chosen) {
       this.filter("" + i);
     } else {
+
       var values = this.state.values.slice();
+
       if (this.state.origin.has([chosen[0]][chosen[1]])) {
         this.setState({
           chosen: null,
@@ -290,12 +295,15 @@ export default class Sudoku extends Component {
         });
         return;
       }
+
       if (i === "X") {
         values[chosen[0]][chosen[1]] = null;
       } else {
         values[chosen[0]][chosen[1]] = "" + i;
       }
+
       var conflict = new Set();
+
       for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
           if (!values[i][j]) {
@@ -309,12 +317,14 @@ export default class Sudoku extends Component {
           }
         }
       }
+
       this.setState({
         values: values,
         highlight: new Set(),
         conflict: conflict,
         chosen: null
       });
+      
       if (!this.state.peep && values.toString() === this.solution.toString()) {
         alert("Felicitaciones, ha completado este rompecabezas.");
         this.setState({
@@ -336,7 +346,7 @@ export default class Sudoku extends Component {
           key={i}
           className="choice"
           value={i}
-          onClick={() => this.handleNumsClick(i)}
+          onChange={() => this.handleNumsClick(i)}
         >
           {i}
         </button>

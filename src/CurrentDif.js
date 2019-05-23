@@ -11,17 +11,16 @@ export default class CurrentDif extends Component {
   }
 
   componentDidMount() {
-    /* this.setState({
-      difLevel: document.querySelector(".active").innerHTML
-    }); */
-  }
-
-  componentWillUpdate() {
     this.setState({
-    difLevel: document.querySelector(".dropdown-item.btn-level.active").innerHTML
-    /* difLevel: document.getElementsByTagName('button').getElementsByClassName('active').innerHTML */
+      difLevel: document.querySelector(".active").innerHTML
     });
   }
+
+  /* componentDidUpdate() {
+    this.setState({
+    difLevel: document.querySelector(".dropdown-item.btn-level.active").innerHTML
+    });
+  } */
 
   render() {
     return (
