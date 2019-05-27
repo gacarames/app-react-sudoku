@@ -21,3 +21,5 @@ npm-debug.log
 #public/*
 #build/static/css/*.map
 #build/static/js/*.map
+
+package-lock.json
