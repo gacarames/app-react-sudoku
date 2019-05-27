@@ -27,6 +27,8 @@ export default class Sudoku extends Component {
     this.help = this.help.bind(this);
     this.handleClick = this.handleClick.bind(this);
 
+    this.alertFromSon = this.alertFromSon.bind(this);
+
     this.state = {
       btnSolveValue: "Resolver"
 
@@ -215,8 +217,8 @@ export default class Sudoku extends Component {
       /* return; */
 
       this.setState({
-        btnSolveValue: "Resolver" 
-      });      
+        btnSolveValue: "Resolver"
+      });
     }
 
     /* var r =  */
@@ -235,7 +237,7 @@ export default class Sudoku extends Component {
             conflict: new Set(),
             highlight: new Set(),
             filter: new Set(),
-            btnSolveValue: "Partida Finalizada" 
+            btnSolveValue: "Partida Finalizada"
           })
         }
       ]
@@ -324,7 +326,7 @@ export default class Sudoku extends Component {
         conflict: conflict,
         chosen: null
       });
-      
+
       if (!this.state.peep && values.toString() === this.solution.toString()) {
         alert("Felicitaciones, ha completado este rompecabezas.");
         this.setState({
@@ -334,9 +336,13 @@ export default class Sudoku extends Component {
     }
   }
 
+  alertFromSon() {
+    console.log('Clickeado desde el componente hijo');
+  }
+
   render() {
     var peep = this.state.peep ? " peep" : "";
-    
+
     /* var checking = this.state.check ? ' checking' : '' */
     /* var hinttime = [' zero', ' one', ' two', ' three'][this.state.helps] */
 
@@ -346,7 +352,7 @@ export default class Sudoku extends Component {
           key={i}
           className="choice"
           value={i}
-          onChange={() => this.handleNumsClick(i)}
+          onClick={() => this.handleNumsClick(i)}
         >
           {i}
         </button>
@@ -354,13 +360,13 @@ export default class Sudoku extends Component {
     });
 
     var controls = [
-      /* 'Muy simple',  */ 
+      /* 'Muy simple',  */
       "Fácil",
       "Medio",
       "Dificil"
-       /* , 'Muy dificil' */
+      /* , 'Muy dificil' */
     ].map((level, index) => {
-      
+
       var active = level === this.state.level ? " active" : "";
 
       return (
@@ -369,12 +375,12 @@ export default class Sudoku extends Component {
           className={"dropdown-item btn-level" + active}
           onClick={() => this.generate(level)}
           type="button"
+          ref={level}
         >
           {level}
         </button>
       );
     });
-
     return (
       <div className="game">
         <div className="container game-wrapper mt-5">
@@ -392,7 +398,7 @@ export default class Sudoku extends Component {
                   aria-expanded="false"
                 >
                   Nueva partida
-                    </button>
+                </button>
                 <div
                   className="dropdown-menu dropdown-menu-right"
                   aria-labelledby="dropdownMenu2"
@@ -407,7 +413,7 @@ export default class Sudoku extends Component {
               <div className="sdk-wrapper card mt-2 md-4 p-3">
                 <div className="row">
                   <div className="col-12">
-                    <CurrentDif />
+                    <CurrentDif difLevel={this.state.level}/>
                   </div>
                 </div>
                 <div className="row">
@@ -420,6 +426,8 @@ export default class Sudoku extends Component {
                       chosen={this.state.chosen}
                       highlight={this.state.highlight}
                       onClick={this.handleClick}
+                      /* onClick={this.alertFromSon} */
+                      /* onClick={(e) => { this.alertFromSon(e); this.handleClick(e);}} */
                     />
                   </div>
 

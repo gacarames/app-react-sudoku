@@ -3,6 +3,15 @@ import React, { Component } from 'react';
 
 export default class Board extends Component {
 
+  constructor(props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick(e) {    
+    this.props.onClick(e);
+  }
+
   getsquares(rowindex) {
     var squares = [..."012345678"].map((i, squareindex) => {
       var cord = rowindex + "" + squareindex,
@@ -27,6 +36,10 @@ export default class Board extends Component {
           key={squareindex}
           className={className}
           onClick={() => this.props.onClick(rowindex, squareindex)}
+          
+          /* onClick={this.onClick} */
+          
+          /* onClick={() => this.props.onClick(rowindex, squareindex)} */
         >
           {this.props.values[rowindex][squareindex]}
         </button>
@@ -34,17 +47,27 @@ export default class Board extends Component {
     });
 
     return (
-      <div key={rowindex} className={"board-row " + rowindex}>
+      <div
+        key={rowindex}
+        className={"board-row " + rowindex}
+      >
         {squares}
       </div>
     );
 
   }
 
-  handleSetKeyup(e) {
-    addEventListener('keyup',  function (e) {
+  /* handleSetKeyup(e) {
 
-      /* console.log(e); */
+    addEventListener("keyup", function (e) {
+      e.preventDefault();
+      if (e.keyCode === 13) {
+        console.log('Evento "Enter" registrado')
+        document.getElementsByClassName("btn-sdk-delete").click();
+      }
+    });
+
+    addEventListener('keyup', function (e) {
 
       var typeValue = /^[0-9]$/.test(e.key);
 
@@ -53,8 +76,7 @@ export default class Board extends Component {
       if (typeValue) {
 
         console.log("La tecla presionada es un numero entero");
-        /* squareFocus.innerHTML = parseInt(e.key, 10); */
-        squareFocus.innerHTML = e.key;
+        squareFocus.innerHTML = parseInt(e.key, 10);
 
       } else if (e.keyCode === 8 || e.keyCode === 46) {
         
@@ -66,18 +88,14 @@ export default class Board extends Component {
       }
 
     })
-  }
-
-  componentDidUpdate() {
-    this.handleSetKeyup();
-  }
+  } */
 
   render() {
 
     var rows = [..."012345678"].map((i, rowindex) => {
       return this.getsquares(rowindex);
     });
-    return <div className="board" onClick={this.handleSetKeyup.bind(this)}>
+    return <div className="board" onClick={this.handleSetKeyup}>
       {rows}
     </div>;
   }
