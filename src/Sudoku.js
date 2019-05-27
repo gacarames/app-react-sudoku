@@ -265,7 +265,7 @@ export default class Sudoku extends Component {
           }
         }
       }
-      this.highlight(i, j);
+      /* this.highlight(i, j); */
       var chosen = i + "" + j;
       var possible = Array.from(this.checkPossible(i, j)).toString();
       this.setState({
@@ -375,7 +375,6 @@ export default class Sudoku extends Component {
           className={"dropdown-item btn-level" + active}
           onClick={() => this.generate(level)}
           type="button"
-          ref={level}
         >
           {level}
         </button>
