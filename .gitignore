@@ -21,5 +21,3 @@ npm-debug.log
 #public/*
 #build/static/css/*.map
 #build/static/js/*.map
-
-server.js
